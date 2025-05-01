@@ -1,0 +1,33 @@
+DATASET:
+  NAME: "CIFAR"  # Options: CIFAR, IMAGENET, OXFORD_PETS, FLOWERS102
+  DATA_PATH: "/path/to/dataset"
+  BATCH_SIZE: 32
+  NUM_WORKERS: 16
+  PIN_MEMORY: True
+  SHOTS: 0  # Number of shots per class (0 for full dataset, 16 for 16-shot)
+
+MODEL:
+  BACKBONE:
+    NAME: "ViT-B/32"
+  PRECISION: "amp"  # Options: fp32, amp
+  TYPE: "fine_only"  # Options: plain_fine, plain_fine_coarse, fine_only, fine_coarse, fine_context
+
+TRAINER:
+  EPOCHS: 100
+  LR: 0.0001
+  EVAL_INTERVAL: 2
+  DISTRIBUTED: True
+  WORLD_SIZE: 2
+  MASTER_ADDR: "localhost"
+  MASTER_PORT: "12355"
+  EARLY_STOPPING: True
+  PATIENCE: 10
+  MIN_DELTA: 0.01
+
+WANDB:
+  API_KEY: "your_wandb_api_key"
+  PROJECT: "prompt-learning-eval"
+  RUN_NAME: "flat_fine_coarse"
+
+ARTIFACT:
+  NAME: "vit-32-CIFAR-fine_coarse_concat_cross-16-shots-bs32"
