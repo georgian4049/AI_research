@@ -5,6 +5,7 @@ This repository serves as a collection of personal AI research initiatives focus
 - Improving the performance and generalization of existing models through architectural modifications, prompt learning, or better training strategies.
 - Designing and developing novel model architectures from scratch tailored to specific tasks or datasets.
 - Exploring cutting-edge topics in multimodal learning, fine-grained recognition, few-shot learning, and large language models (LLMs).
+- Exploring sustainable methods without affecting considerable performance.
 
 Each project is self-contained within its respective directory and includes its own `README.md` file detailing the problem statement, methodology, experiments, and results. Please refer to those individual files for in-depth explanations.
 
